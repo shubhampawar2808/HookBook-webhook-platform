@@ -1,0 +1,102 @@
+# Environment and secrets
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+secrets/
+credentials/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+# Python packaging dirs (do not ignore scripts/lib launcher helpers)
+/lib/
+/lib64/
+!scripts/lib/
+!scripts/lib/**
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+.venv/
+venv/
+ENV/
+env/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+.hypothesis/
+
+# Node / Frontend
+node_modules/
+frontend/dist/
+frontend/build/
+*.tsbuildinfo
+.npm
+.eslintcache
+.stylelintcache
+
+# Vite
+frontend/.vite/
+
+# IDE / Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Docker
+*.log
+docker-data/
+
+# Alembic / local DB dumps
+*.sql.gz
+*.dump
+
+# OS
+Desktop.ini
+
+# Test artifacts
+test-results/
+playwright-report/
+coverage/
+
+# Celery Beat local schedule files
+celerybeat-schedule
+celerybeat-schedule.*
+celerybeat.pid
+
+# Misc
+*.bak
+tmp/
+temp/
+.cache/
+
+# Local tooling / portable Redis (never publish binaries)
+tools/
+
+# Local development launcher runtime (PIDs + logs)
+.run/
+runtime/

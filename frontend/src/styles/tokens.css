@@ -1,0 +1,53 @@
+:root {
+  /* Industrial Precision — The Webhook Observatory */
+  --hf-carbon: #171916;
+  --hf-graphite: #292d27;
+  --hf-moss: #34392f;
+  --hf-bone: #e8e2d4;
+  --hf-copper: #d97745;
+  --hf-sage: #b6c28a;
+  --hf-steel: #a8a49a;
+
+  --hf-bg: var(--hf-carbon);
+  --hf-bg-raised: var(--hf-graphite);
+  --hf-bg-panel: var(--hf-moss);
+  --hf-bg-inset: #1e221c;
+  --hf-border: rgba(232, 226, 212, 0.1);
+  --hf-border-strong: rgba(232, 226, 212, 0.22);
+  --hf-text: var(--hf-bone);
+  --hf-text-muted: var(--hf-steel);
+  --hf-text-dim: #7a776f;
+  --hf-accent: var(--hf-copper);
+  --hf-accent-soft: rgba(217, 119, 69, 0.16);
+  --hf-positive: var(--hf-sage);
+  --hf-positive-soft: rgba(182, 194, 138, 0.14);
+
+  /* Semantic status — accessible, not brand-tinted everywhere */
+  --hf-success: #8fba6a;
+  --hf-success-bg: rgba(143, 186, 106, 0.12);
+  --hf-warning: #d4a24c;
+  --hf-warning-bg: rgba(212, 162, 76, 0.14);
+  --hf-danger: #d96b5c;
+  --hf-danger-bg: rgba(217, 107, 92, 0.14);
+  --hf-info: #7aa0b8;
+  --hf-info-bg: rgba(122, 160, 184, 0.14);
+  --hf-neutral: var(--hf-steel);
+  --hf-neutral-bg: rgba(168, 164, 154, 0.12);
+
+  --hf-font-display: "Fraunces", "Georgia", serif;
+  --hf-font-sans: "Source Sans 3", "Segoe UI", sans-serif;
+  --hf-font-mono: "JetBrains Mono", "Cascadia Code", monospace;
+
+  --hf-sidebar-w: 248px;
+  --hf-sidebar-collapsed: 72px;
+  --hf-topbar-h: 56px;
+  --hf-radius-sm: 4px;
+  --hf-radius: 8px;
+  --hf-radius-lg: 12px;
+  --hf-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+  --hf-focus: 0 0 0 2px var(--hf-carbon), 0 0 0 4px var(--hf-copper);
+  --hf-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --hf-duration: 180ms;
+
+  color-scheme: dark;
+}

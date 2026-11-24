@@ -1,0 +1,42 @@
+# Production-oriented Compose overlay (do not use for local reload/dev).
+# Usage (after reviewing secrets): docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d
+# Requires strong SECRET_KEY, REDIS_REQUIRED=true, DEBUG=false, HTTPS CORS origins.
+
+services:
+  backend:
+    environment:
+      APP_ENV: production
+      DEBUG: "false"
+      REDIS_REQUIRED: "true"
+      DELIVERY_ALLOW_HTTP_LOCALHOST: "false"
+      DELIVERY_SSRF_ALLOW_DEV_HTTP: "false"
+      ALLOW_PUBLIC_REGISTRATION: "false"
+    command: >
+      sh -c "alembic upgrade head &&
+      uvicorn app.main:app
+      --host 0.0.0.0
+      --port 8000
+      --workers 2"
+    ports:
+      - "127.0.0.1:8000:8000"
+
+  celery-worker:
+    environment:
+      APP_ENV: production
+      DEBUG: "false"
+      REDIS_REQUIRED: "true"
+      DELIVERY_ALLOW_HTTP_LOCALHOST: "false"
+      DELIVERY_SSRF_ALLOW_DEV_HTTP: "false"
+      ALLOW_PUBLIC_REGISTRATION: "false"
+
+  celery-beat:
+    environment:
+      APP_ENV: production
+      DEBUG: "false"
+      REDIS_REQUIRED: "true"
+      DELIVERY_ALLOW_HTTP_LOCALHOST: "false"
+      DELIVERY_SSRF_ALLOW_DEV_HTTP: "false"
+      ALLOW_PUBLIC_REGISTRATION: "false"
+
+  frontend:
+    profiles: ["frontend-dev"]
